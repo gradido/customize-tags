@@ -17,6 +17,8 @@ class Module extends \humhub\components\Module
 
     public $spacesShowingMaxTags = 10;
 
+    public $userShowingMaxTags = 10;
+
     /**
      * @inheritdoc
      */

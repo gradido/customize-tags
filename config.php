@@ -9,6 +9,7 @@
 use humhub\components\Application;
 use humhub\modules\ui\form\widgets\BasePicker;
 use humhub\modules\space\widgets\SpaceDirectoryTagList;
+use humhub\modules\user\widgets\PeopleTagList;
 
 /** @noinspection MissedFieldInspection */
 return [
@@ -17,7 +18,8 @@ return [
     'namespace' => 'humhub\modules\customizetags',
     'events' => [
         [BasePicker::class, BasePicker::EVENT_BEFORE_RUN, ['\humhub\modules\customizetags\Events', 'onBasePicker']],
-        [SpaceDirectoryTagList::class, SpaceDirectoryTagList::EVENT_BEFORE_RUN, ['\humhub\modules\customizetags\Events', 'onSpaceDirectoryTagList']]
+        [SpaceDirectoryTagList::class, SpaceDirectoryTagList::EVENT_BEFORE_RUN, ['\humhub\modules\customizetags\Events', 'onSpaceDirectoryTagList']],
+        [PeopleTagList::class, PeopleTagList::EVENT_BEFORE_RUN, ['\humhub\modules\customizetags\Events', 'onUserDirectoryTagList']]
     ]
 ];
 ?>
